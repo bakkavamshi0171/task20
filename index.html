@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:100vw;
+            height:100vh;
+            background-color: rgb(197, 194, 194);
+        }
+        .sky{
+            height:30%;
+            width:100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .sun{
+            background-color: orange;
+            width:120px;
+            height:120px;
+            border-radius: 50%;
+            position: absolute;
+            left:-20px;
+            top:50px;
+            animation-name: example;
+            animation-duration: 15s;
+            animation-iteration-count: 1;
+            z-index: 2;
+        }
+        .clouds img{
+            width: 200px;
+            position: absolute;
+        }
+        .house{
+            text-align: center;
+        
+            height:70%;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        .house img{
+           width:35%;
+           height:50%
+        }
+        .dog{
+            position: absolute;
+            left:65%;
+            bottom:30%;
+            width:20%;
+            height:20%;
+        }
+    
+        .cloud1{
+            left:20%;
+            animation-name: example1;
+            animation-duration:7s;
+            animation-iteration-count: 2;
+        }
+        .cloud2{
+            right:0px;
+            animation-name: example2;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-delay: 3s;
+        }
+        .cloud3{
+            top:50px;
+            left:0px;
+            animation-name: example3;
+            animation-duration: 10s;
+            animation-iteration-count:2;
+            animation-delay: 3s;
+        }
+        .cloud4{
+            left:50%;
+            animation-name: example4;
+            animation-duration: 10s;
+            animation-iteration-count: 2;
+        }
+        .cloud5{
+            left:100px;
+            top:50px;
+            animation-name: example;
+            animation-duration: 15s;
+            animation-iteration-count: 1;
+            z-index: 1;
+        }
+        .cloud6{
+            top:50px;
+            right:20%;
+            animation-name: example5;
+            animation-duration: 5s;
+            animation-iteration-count:2;
+            animation-delay: 3s;
+            transform: translateX(50%);
+            transition: transform 2s;
+        }
+        @keyframes example {
+            from{
+                left:-20px;
+                top:50px;
+            }
+            to{
+                left:90%;
+                top:50px;
+            }
+        }
+        @keyframes example1 {
+            from{
+                left:20%;
+                top:50px;
+            }
+            to{
+                left:100%;
+                top:50px;
+            }
+        }
+        @keyframes example2 {
+            from{
+                right:0px;
+            }
+            to{
+                right:100%;
+                transition: right 2s;
+            }
+        }
+        @keyframes example3 {
+            from{
+               top:50px
+            }
+            to{
+               left:60%;
+            }
+        }
+        @keyframes example4{
+            from{
+                left:50%;
+            }
+            to{
+                left:0px;
+            }
+        }
+        @keyframes example5 {
+            from{
+                top:50px;
+                right:20%;
+            }
+            to{
+                right:90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sky">
+            <div class="sun"></div>
+            <div class="clouds">
+                <img src="cloud.png" class="cloud1">
+                <img src="cloud.png" class="cloud2">
+                <img src="cloud.png" class="cloud3">
+                <img src="cloud.png" class="cloud4">
+                <img src="cloud.png" class="cloud6">
+                <img src="cloud.png" class="cloud5">
+            </div>
+        </div>
+        <div class="house">
+            <img src="park.png" class="garden1">
+            <img src="house.png" classs="home">
+            <img src="park.png" class="garden2">
+            <img src="dog-walking.png" height="" class="dog">
+        </div> 
+    </div>
+
+</body>
+</html>
